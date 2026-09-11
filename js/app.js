@@ -36,7 +36,10 @@ function mostrarEstudiantes(lista = estudiantes) {
                 <td>${estudiante.nombre}</td>
                 <td>${estudiante.correo}</td>
                 <td>${estudiante.programa}</td>
-                <td>Acciones</td>
+                <td>
+                    <button onclick="editarEstudiante(${estudiante.id})">Editar</button>
+                    <button onclick="eliminarEstudiante(${estudiante.id})">Eliminar</button>
+                </td>
             </tr>
         `;
     });
