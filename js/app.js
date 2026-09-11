@@ -38,7 +38,7 @@ if (estudianteEditando === null) {
         mostrarEstudiantes();
         formulario.reset();
 
-            console.log("Formulario enviado");
+        console.log("Formulario enviado");
 });
 
 
@@ -87,4 +87,19 @@ function editarEstudiante(id) {
     estudianteEditando = id;
 }
 
+const buscador = document.querySelector("#buscar");
+
+buscador.addEventListener("input", function() {
+
+    const texto = buscador.value.toLowerCase();
+
+    const resultado = estudiantes.filter(
+        estudiante =>
+            estudiante.nombre
+                .toLowerCase()
+                .includes(texto)
+    );
+
+    mostrarEstudiantes(resultado);
+});
 
