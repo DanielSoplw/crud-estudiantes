@@ -17,9 +17,7 @@ formulario.addEventListener("submit", function(event) {
     };
     estudiantes.push(estudiante);
 
-        mostrarEstudiantes();
-        formulario.reset();
-    if (estudianteEditando === null) {
+if (estudianteEditando === null) {
 
     const estudiante = {
             id: Date.now(),
@@ -42,6 +40,9 @@ formulario.addEventListener("submit", function(event) {
 
             estudianteEditando = null;
         }
+
+        mostrarEstudiantes();
+        formulario.reset();
 
             console.log("Formulario enviado");
 });
