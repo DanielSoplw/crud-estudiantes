@@ -37,6 +37,15 @@ function mostrarEstudiantes(lista = estudiantes) {
     });
 }
 
+function eliminarEstudiante(id) {
+
+    estudiantes = estudiantes.filter(
+        estudiante => estudiante.id !== id
+    );
+
+    mostrarEstudiantes();
+}
+
 
 
 estudiantes.push(estudiante);
