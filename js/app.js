@@ -1,4 +1,5 @@
 let estudiantes = [];
+let estudianteEditando = null;
 
 const formulario = document.querySelector("#formEstudiante");
 
