@@ -36,6 +36,13 @@ function mostrarEstudiantes(lista = estudiantes) {
     });
 }
 
+const estudiante = {
+    id: Date.now(),
+    nombre,
+    correo,
+    programa
+};
+
 estudiantes.push(estudiante);
 mostrarEstudiantes();
 formulario.reset();
