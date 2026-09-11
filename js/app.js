@@ -1,5 +1,4 @@
 let estudiantes = [];
-estudiantes.push(estudiante);
 
 const formulario = document.querySelector("#formEstudiante");
 
@@ -14,8 +13,12 @@ formulario.addEventListener("submit", function(event) {
     correo,
     programa
     };
+    estudiantes.push(estudiante);
+
     console.log("Formulario enviado");
 });
+
+
 
 
 function mostrarEstudiantes(lista = estudiantes) {
@@ -45,6 +48,7 @@ function eliminarEstudiante(id) {
 
     mostrarEstudiantes();
 }
+
 
 mostrarEstudiantes();
 formulario.reset();
