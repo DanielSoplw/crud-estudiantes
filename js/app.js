@@ -54,4 +54,17 @@ function eliminarEstudiante(id) {
     mostrarEstudiantes();
 }
 
+function editarEstudiante(id) {
+
+    const estudiante = estudiantes.find(
+        estudiante => estudiante.id === id
+    );
+
+    document.querySelector("#nombre").value = estudiante.nombre;
+    document.querySelector("#correo").value = estudiante.correo;
+    document.querySelector("#programa").value = estudiante.programa;
+
+    estudianteEditando = id;
+}
+
 
