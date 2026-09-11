@@ -1,22 +1,22 @@
 let estudiantes = [];
+estudiantes.push(estudiante);
 
 const formulario = document.querySelector("#formEstudiante");
 
 formulario.addEventListener("submit", function(event) {
     event.preventDefault();
-    console.log("Formulario enviado");
-});
-
-const nombre = document.querySelector("#nombre").value;
-const correo = document.querySelector("#correo").value;
-const programa = document.querySelector("#programa").value;
-
-const estudiante = {
+    const nombre = document.querySelector("#nombre").value;
+    const correo = document.querySelector("#correo").value;
+    const programa = document.querySelector("#programa").value;
+    const estudiante = {
     id: Date.now(),
     nombre,
     correo,
     programa
-};
+    };
+    console.log("Formulario enviado");
+});
+
 
 function mostrarEstudiantes(lista = estudiantes) {
 
@@ -46,8 +46,5 @@ function eliminarEstudiante(id) {
     mostrarEstudiantes();
 }
 
-
-
-estudiantes.push(estudiante);
 mostrarEstudiantes();
 formulario.reset();
