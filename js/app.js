@@ -12,6 +12,7 @@ const correo = document.querySelector("#correo").value;
 const programa = document.querySelector("#programa").value;
 
 const estudiante = {
+    id: Date.now(),
     nombre,
     correo,
     programa
@@ -36,12 +37,7 @@ function mostrarEstudiantes(lista = estudiantes) {
     });
 }
 
-const estudiante = {
-    id: Date.now(),
-    nombre,
-    correo,
-    programa
-};
+
 
 estudiantes.push(estudiante);
 mostrarEstudiantes();
