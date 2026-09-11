@@ -1,6 +1,6 @@
 const formulario = document.querySelector("#formEstudiante");
 
-let estudiantes = [];
+let estudiantes = JSON.parse(localStorage.getItem("estudiantes")) || [];
 let estudianteEditando = null;
 
 
@@ -102,4 +102,14 @@ buscador.addEventListener("input", function() {
 
     mostrarEstudiantes(resultado);
 });
+
+function guardarEstudiantes() {
+
+    localStorage.setItem(
+        "estudiantes",
+        JSON.stringify(estudiantes)
+    );
+}
+
+mostrarEstudiantes();
 
