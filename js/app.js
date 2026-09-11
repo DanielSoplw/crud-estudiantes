@@ -15,9 +15,11 @@ formulario.addEventListener("submit", function(event) {
     };
     estudiantes.push(estudiante);
 
+        mostrarEstudiantes();
+        formulario.reset();
+
     console.log("Formulario enviado");
 });
-
 
 
 
@@ -50,5 +52,3 @@ function eliminarEstudiante(id) {
 }
 
 
-mostrarEstudiantes();
-formulario.reset();
