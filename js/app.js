@@ -17,4 +17,25 @@ const estudiante = {
     programa
 };
 
+function mostrarEstudiantes(lista = estudiantes) {
+
+    const tabla = document.querySelector("#tablaEstudiantes");
+
+    tabla.innerHTML = "";
+
+    lista.forEach(estudiante => {
+
+        tabla.innerHTML += `
+            <tr>
+                <td>${estudiante.nombre}</td>
+                <td>${estudiante.correo}</td>
+                <td>${estudiante.programa}</td>
+                <td>Acciones</td>
+            </tr>
+        `;
+    });
+}
+
 estudiantes.push(estudiante);
+mostrarEstudiantes();
+formulario.reset();
