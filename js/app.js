@@ -1,3 +1,5 @@
+let estudiantes = [];
+
 const formulario = document.querySelector("#formEstudiante");
 
 formulario.addEventListener("submit", function(event) {
@@ -14,3 +16,5 @@ const estudiante = {
     correo,
     programa
 };
+
+estudiantes.push(estudiante);
